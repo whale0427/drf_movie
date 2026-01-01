@@ -170,7 +170,7 @@ function pay(order){
         <div class="flex bg-white rounded-xl w-full h-20 mt-5 justify-between shadow-md shadow-[#C69C92]">
           <form class="flex ml-5 items-center justify-center" method="post">
             <label for="search">搜索：</label>
-            <input v-model="search" class="flex h-10 w-60 outline-none rounded px-1 mr-5 text-sm bg-gray-100 hover:shadow-md hover:shadow-[#969696] focus:shadow-md focus:shadow-[#969696]" name="search" id="search" placeholder="请输入订单号或交易号">
+            <input v-model="search" class="flex h-10 w-60 outline-none rounded px-1 mr-5 text-sm bg-gray-100 hover:shadow-sm hover:shadow-[#969696] focus:shadow-sm focus:shadow-[#969696]" name="search" id="search" placeholder="请输入订单号或交易号">
             <button v-on:click.prevent="search_content" class="flex bg-blue-600 text-white w-13 items-center justify-center rounded cursor-pointer hover:shadow-md hover:shadow-blue-300">查询</button>
           </form>
           <div class="flex mr-5 items-center justify-center space-x-5">
