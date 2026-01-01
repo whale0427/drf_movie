@@ -1,0 +1,77 @@
+# ====================== 1. Python虚拟环境 ======================
+.venv/
+venv/
+env/
+ENV/
+
+# ====================== 2. 前端node_modules ======================
+frontend/node_modules/
+frontend/.npm
+frontend/.yarn
+frontend/dist/
+frontend/.vite
+
+# ====================== 3. Python编译文件 ======================
+**/__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+*.egg
+
+# ====================== 4. Django相关 ======================
+*.db
+*.sqlite3
+*.sqlite3-journal
+# 数据库文件
+*.db3
+# 媒体文件
+**/media/
+# 静态文件（如果是收集的静态文件）
+# **/static/
+# 环境变量文件
+**/.env
+**/.env.local
+**/.env.*.local
+# 日志文件
+*.log
+# Django本地设置
+local_settings.py
+#追加内容
+zhh_movie/.env
+
+# ====================== 5. 前端相关 ======================
+# npm/yarn缓存
+.npm
+.yarn
+.yarn-cache
+# 依赖锁文件（可选上传，但通常不上传）
+# package-lock.json
+# yarn.lock
+# 编译输出
+*.js.map
+*.css.map
+*.ts.map
+# 缓存目录
+.cache/
+.temp/
+.tmp/
+
+# ====================== 6. IDE/编辑器 ======================
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
