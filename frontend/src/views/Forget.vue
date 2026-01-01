@@ -19,7 +19,7 @@ function validatePassword(){
   axios
       .post("/api/users/reset_password/",{"email":email.value})
       .then(response=>{
-        showMessage("提交成功，请到邮箱进行验证","success",()=>{window.parent.forgetSwal.close()},1500)
+        showMessage("提交成功，请到邮箱进行验证","success",back,1500)
       })
       .catch(error=>{
         if(error.response){
@@ -31,6 +31,9 @@ function validatePassword(){
           showMessageOptions(error)
         }
       })
+}
+function back(){
+  window.parent.forgetSwal.close()
 }
 </script>
 
@@ -47,10 +50,10 @@ function validatePassword(){
           </svg>
         </div>
         <div class="flex items-center justify-center space-x-10">
-          <button v-on:click.prevent="validatePassword" class="h-10 w-20 bg-[#B64529] rounded text-white transition-all duration-200 hover:shadow-md hover:shadow-[#B64529]">
+          <button v-on:click.prevent="validatePassword" class="h-10 w-20 bg-[#B64529] rounded text-white transition-all duration-200 hover:shadow-sm hover:shadow-gray-400">
             验证
           </button>
-          <button v-on:click="back" class="h-10 w-20 bg-red-500 rounded text-white transition-all duration-200 hover:shadow-md hover:shadow-[#B64529]" type="button">
+          <button v-on:click="back" class="h-10 w-20 bg-red-500 rounded text-white transition-all duration-200 hover:shadow-sm hover:shadow-gray-400" type="button">
             取消
           </button>
         </div>
